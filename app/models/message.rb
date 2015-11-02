@@ -6,12 +6,12 @@ class Message < ActiveRecord::Base
   def send_sms
     response = RestClient::Request.new(
     :method => :post,
-    :url =>
-    :user =>
-    :password =>
+    :url => 'https://api.twilio.com/2010-04-01/Accounts/AC05ab324daa7bfaf8c04bd6fb31414ac9/Messages.json'
+    :user => ENV['TWILIO_ACCOUNT_SID'],
+    :password => ENV['TWILIO_AUTH_TOKEN'],
     :payload => { :Body => body,
-                  :From => from,
                   :To => to }
+                  :From => from,
     ).execute
   end
 end
