@@ -11,6 +11,7 @@ gem 'bootstrap-sass'
 gem 'sass-rails'
 gem 'hirb'
 gem 'rest-client'
+gem 'bootstrap_form'
 
 group :development do
   gem 'byebug'

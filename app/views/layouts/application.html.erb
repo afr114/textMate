@@ -4,11 +4,12 @@
   <title>Textmate</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/cerulean/bootstrap.min.css">
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+  <%= flash[:notice] %>
+<div class="container">
+  <%= yield %>
+</div>
 </body>
 </html>

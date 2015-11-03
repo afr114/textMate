@@ -1,0 +1,20 @@
+<div class ="center-text">
+  <h1> Submit New Message </h1>
+
+  <% if @message.errors.any? %>
+    <p>Something Went Wrong:</p>
+      <ul>
+        <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+  <%= bootstrap_form_for(@message) do |f| %>
+    <%= f.text_field :to %>
+    <%= f.text_field :from %>
+    <%= f.text_area :body %>
+    <%= f.submit 'Send Message', class: "btn btn-primary" %>
+  <% end %>
+  </div>
+<%= link_to "Home", messages_path %>
