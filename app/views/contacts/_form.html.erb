@@ -1,0 +1,5 @@
+<%= bootstrap_form_for @contact do |f| %>
+<%= f.text_field :name%><br />
+<%= f.text_field :phone_number %><br />
+<%= f.submit 'Add Contact', class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,21 @@
+<div class="container">
+  <table class="table">
+  <h2>Contacts</h2>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Select Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @contacts.each do |contact| %>
+      <tr>
+        <td class="name"><%= contact.name %></td>
+        <td class="phone-number"><%= contact.phone_number %></td>
+        <td><input type="checkbox", onclick="obtainPhoneNumber"/></td>
+      </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

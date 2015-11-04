@@ -15,3 +15,10 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  function obtainPhoneNumber() {
+  // var phoneNumber = document.getElementByClassName("phone-number");
+  alert("hello");
+}
+});

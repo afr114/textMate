@@ -27,6 +27,7 @@ def edit
 end
 
 def update
+  @contact = Contact.find(params[:id])
   @contact.update(contact_params)
   flash[:notice] = "Update successful"
   redirect_to contacts_path
